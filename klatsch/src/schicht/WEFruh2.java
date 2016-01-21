@@ -5,16 +5,20 @@ package schicht;
 import java.util.ArrayList;
 
 import person.Person;
+import personInterface.AddOnePerson;
 
 public class WEFruh2 extends Schicht {
-	private ArrayList<Person> pList = new ArrayList<Person>();
-	private static final int ANZAHL = 1;
+	
 
 	@Override
 	public void addPerson(Person p) {
-		// TODO Auto-generated method stub
+		personInterface = new AddOnePerson();
 		
 	}
+	private double schichtdauer = 6;
+	private double schichtpause = 0.5;
+	private int besatzung = 1;
+	private String beschreibung = "am wochenende von 10.00 Uhr bis 16.00 Uhr Schicht";
 
 	@Override
 	public String getBeschreibung() {

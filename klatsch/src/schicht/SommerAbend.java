@@ -4,19 +4,24 @@ package schicht;
  * dieses schicht wird nur im sommer als unterst�tzungskraft eingesetzt
  */
 
-import java.util.ArrayList;
+import personInterface.AddOnePerson;
 
 import person.Person;
+import personInterface.AddOnePerson;
 
 public class SommerAbend extends Schicht {
-	private ArrayList<Person> pList = new ArrayList<Person>();
-	private static final int ANZAHL = 1;
+	
 
 	@Override
 	public void addPerson(Person p) {
-		// TODO Auto-generated method stub
+		personInterface = new AddOnePerson();
 		
 	}
+	
+	private double schichtdauer = 4;
+	private double schichtpause = 0.5;
+	private int besatzung = 1;
+	private String beschreibung = "nur im Sommer von 18.00 Uhr bis 22.00 Uhr Schicht";
 
 	@Override
 	public String getBeschreibung() {
