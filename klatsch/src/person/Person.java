@@ -1,15 +1,19 @@
 package person;
 
-import java.util.Date;
-
-public interface Person {	
-	public String getVorname();
-	public String getNachname();
-	public Date getGeburtsdatum();
-	public String getVersicherungsnummer();
-	public String getKrankenkasse();
-	public String getSteuernummer();
-	public int getAngemeledetestunden();
-	public int getGearbeitetestunden();
-	public Date getUrlaubdatum();	
+public class Person {	
+	
+	private String vorname;
+	private String nachname;
+	
+	public Person(String vorname, String nachname) {
+		this.vorname = vorname;
+		this.nachname = nachname;
+	}
+	
+	public String getVorname() {
+		return vorname;
+	}
+	public String getNachname() {
+		return nachname;
+	}	
 }

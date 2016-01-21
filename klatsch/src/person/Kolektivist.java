@@ -1,76 +1,108 @@
 package person;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 import schicht.Schicht;
 
-public class Kolektivist implements Person {
+public class Kolektivist extends Person {
 
-	private String vorname;
-	private String nachname;
-	
+	private String versicherungsnummer;
+	private SimpleDateFormat geburtsdatum;
+	private String krankenkasse;
+	private String steuernummer;
+	private double angemeledetestunden;
+	private double gearbeitetestunden;
+	private Date urlaubdatum;
+
 	private ArrayList<Schicht> festeSchichten;
-	
+
+	// for test only
 	public Kolektivist(String vorname, String nachname) {
-		this.vorname = vorname;
-		this.nachname = nachname;
-		// TODO Auto-generated constructor stub
-	}
-	
-	@Override
-	public String getVorname() {
-		// TODO Auto-generated method stub
-		return vorname;
+		super(vorname, nachname);
 	}
 
-	@Override
-	public String getNachname() {
-		// TODO Auto-generated method stub
-		return nachname;
-	
+	/**
+	 * @param vorname
+	 * @param nachname
+	 * @param versicherungsnummer
+	 * @param geburtsdatum
+	 * @param krankenkasse
+	 * @param steuernummer
+	 * @param angemeledetestunden
+	 */
+	public Kolektivist(String vorname, String nachname, String versicherungsnummer, SimpleDateFormat geburtsdatum,
+			String krankenkasse, String steuernummer, double angemeledetestunden) {
+		super(vorname, nachname);
+		this.versicherungsnummer = versicherungsnummer;
+		this.geburtsdatum = geburtsdatum;
+		this.krankenkasse = krankenkasse;
+		this.steuernummer = steuernummer;
+		this.angemeledetestunden = angemeledetestunden;
 	}
 
-	@Override
+	public ArrayList<Schicht> getFesteSchichten() {
+		return festeSchichten;
+	}
+
 	public String getVersicherungsnummer() {
-		// TODO Auto-generated method stub
-		return null;
+		return versicherungsnummer;
 	}
 
-	@Override
-	public Date getGeburtsdatum() {
-		// TODO Auto-generated method stub
-		return null;
+	public SimpleDateFormat getGeburtsdatum() {
+		return geburtsdatum;
 	}
 
-	@Override
 	public String getKrankenkasse() {
-		// TODO Auto-generated method stub
-		return null;
+		return krankenkasse;
 	}
 
-	@Override
 	public String getSteuernummer() {
-		// TODO Auto-generated method stub
-		return null;
+		return steuernummer;
 	}
 
-	@Override
-	public int getAngemeledetestunden() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double getAngemeledetestunden() {
+		return angemeledetestunden;
 	}
 
-	@Override
-	public int getGearbeitetestunden() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double getGearbeitetestunden() {
+		return gearbeitetestunden;
 	}
 
-	@Override
 	public Date getUrlaubdatum() {
-		// TODO Auto-generated method stub
-		return null;
+		return urlaubdatum;
 	}
 
+	public void setFesteSchichten(ArrayList<Schicht> festeSchichten) {
+		this.festeSchichten = festeSchichten;
+	}
+
+	public void setVersicherungsnummer(String versicherungsnummer) {
+		this.versicherungsnummer = versicherungsnummer;
+	}
+
+	public void setGeburtsdatum(SimpleDateFormat geburtsdatum) {
+		this.geburtsdatum = geburtsdatum;
+	}
+
+	public void setKrankenkasse(String krankenkasse) {
+		this.krankenkasse = krankenkasse;
+	}
+
+	public void setSteuernummer(String steuernummer) {
+		this.steuernummer = steuernummer;
+	}
+
+	public void setAngemeledetestunden(double angemeledetestunden) {
+		this.angemeledetestunden = angemeledetestunden;
+	}
+
+	public void setGearbeitetestunden(double gearbeitetestunden) {
+		this.gearbeitetestunden = gearbeitetestunden;
+	}
+
+	public void setUrlaubdatum(Date urlaubdatum) {
+		this.urlaubdatum = urlaubdatum;
+	}
 }
