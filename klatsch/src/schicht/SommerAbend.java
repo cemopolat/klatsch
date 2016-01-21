@@ -18,4 +18,10 @@ public class SommerAbend extends Schicht {
 		
 	}
 
+	@Override
+	public String getBeschreibung() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

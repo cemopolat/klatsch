@@ -16,4 +16,10 @@ public class WEMittag1 extends Schicht {
 		
 	}
 
+	@Override
+	public String getBeschreibung() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

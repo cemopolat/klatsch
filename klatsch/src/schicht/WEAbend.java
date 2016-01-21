@@ -16,6 +16,12 @@ public class WEAbend extends Schicht{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public String getBeschreibung() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }
