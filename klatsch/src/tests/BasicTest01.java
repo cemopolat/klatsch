@@ -1,4 +1,4 @@
-package test;
+package tests;
 
 import person.Kolektivist;
 import person.Person;
