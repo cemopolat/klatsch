@@ -12,7 +12,7 @@ public class Abend extends Schicht {
 	
 
 	
-	private int schichtdauer = 6;
+	private double schichtdauer = 6;
 	private double schichtPause = 0.5;
 	private int besatzung = 1;
 	private String beschreibung = "Abend Schicht unter der Woche von 18 Uhr bis 24 Uhr";
