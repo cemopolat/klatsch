@@ -2,8 +2,6 @@ package schicht;
 /*dieses Schicht von Dienstag bis Donnerstag von 15.00 - 20.00 Uhr Schicht
  * und arbeitet nur ein person*/
 
-import java.util.ArrayList;
-
 import person.Person;
 import personInterface.AddOnePerson;
 

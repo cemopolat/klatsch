@@ -25,14 +25,14 @@ public class WEFruh1 extends Schicht{
 	@Override
 	public String getBeschreibung() {
 		// TODO Auto-generated method stub
-		return null;
+		return beschreibung;
 	}
 
 
 	@Override
 	public double getSchichtdauer() {
 		// TODO Auto-generated method stub
-		return 0;
+		return schichtdauer;
 	}
 
 }

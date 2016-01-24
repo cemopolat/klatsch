@@ -2,11 +2,8 @@ package schicht;
 /*dieses Schicht von Dienstag bis Freitag von 10.30 - 15.00 Uhr Schicht
  * und arbeitet zwei person*/
 
-import personInterface.AddOnePerson;
-
 import person.Person;
-import personInterface.AddTwoPersons;
-import personInterface.PersonInterface; 
+import personInterface.AddTwoPersons; 
 
 
 public class Fruh extends Schicht {
@@ -30,7 +27,7 @@ public class Fruh extends Schicht {
 	@Override
 	public double getSchichtdauer() {
 		// TODO Auto-generated method stub
-		return 0;
+		return schichtdauer;
 	}
 
 	

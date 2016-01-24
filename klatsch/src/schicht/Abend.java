@@ -9,6 +9,7 @@ public class Abend extends Schicht {
 	private double schichtdauer = 6;
 	private double schichtPause = 0.5;
 	private int besatzung = 1;
+	
 	private String beschreibung = "Abend Schicht unter der Woche von 18 Uhr bis 24 Uhr";
 
 	public Abend() {
@@ -22,7 +23,6 @@ public class Abend extends Schicht {
 
 	@Override
 	public double getSchichtdauer() {
-		// TODO Auto-generated method stub
 		return schichtdauer;
 	}
 }

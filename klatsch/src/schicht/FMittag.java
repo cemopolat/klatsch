@@ -6,7 +6,8 @@ import person.Person;
 
 public class FMittag extends Schicht{
 	private String beschreibung = "";
-
+	private double schichtdauer = 4.5;
+	
 	@Override
 	public void addPerson(Person p) {
 		// TODO Auto-generated method stub
