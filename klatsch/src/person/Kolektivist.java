@@ -74,8 +74,10 @@ public class Kolektivist extends Person {
 		return urlaubdatum;
 	}
 
-	public void setFesteSchichten(ArrayList<Schicht> festeSchichten) {
-		this.festeSchichten = festeSchichten;
+	public void setFesteSchichten(Schicht schicht) {
+		if (!festeSchichten.contains(schicht)) {
+			
+		}
 	}
 
 	public void setVersicherungsnummer(String versicherungsnummer) {

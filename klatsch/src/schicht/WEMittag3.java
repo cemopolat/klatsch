@@ -26,4 +26,10 @@ public class WEMittag3 extends Schicht {
 		return null;
 	}
 
+	@Override
+	public double getSchichtdauer() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

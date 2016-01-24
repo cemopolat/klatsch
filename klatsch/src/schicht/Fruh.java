@@ -27,5 +27,11 @@ public class Fruh extends Schicht {
 		return beschreibung;
 	}
 
+	@Override
+	public double getSchichtdauer() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	
 }

@@ -5,20 +5,24 @@ package schicht;
 import personInterface.AddOnePerson;
 
 public class Abend extends Schicht {
-
-	public Abend() {
-		personInterface = new AddOnePerson();
-	}
-	
-
 	
 	private double schichtdauer = 6;
 	private double schichtPause = 0.5;
 	private int besatzung = 1;
 	private String beschreibung = "Abend Schicht unter der Woche von 18 Uhr bis 24 Uhr";
 
+	public Abend() {
+		personInterface = new AddOnePerson();
+	}
+		
 	@Override
 	public String getBeschreibung() {
 		return beschreibung;
+	}
+
+	@Override
+	public double getSchichtdauer() {
+		// TODO Auto-generated method stub
+		return schichtdauer;
 	}
 }

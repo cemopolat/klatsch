@@ -26,4 +26,10 @@ public class WEFruh2 extends Schicht {
 		return null;
 	}
 
+	@Override
+	public double getSchichtdauer() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

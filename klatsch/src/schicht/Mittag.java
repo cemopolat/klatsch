@@ -25,5 +25,10 @@ public class Mittag extends Schicht {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public double getSchichtdauer() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }

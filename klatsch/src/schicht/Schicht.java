@@ -45,4 +45,6 @@ public abstract class Schicht {
 	}
 	
 	public abstract String getBeschreibung();
+	public abstract double getSchichtdauer();
+	
 }
