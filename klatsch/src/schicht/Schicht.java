@@ -3,48 +3,83 @@ package schicht;
 import java.util.ArrayList;
 
 import person.Person;
-import personInterface.PersonInterface;
+import personInterface.PersonVerwaltung;
 
 public abstract class Schicht {
 	
-	// Object handler
-	PersonInterface personInterface;
-
-	// add person to shift
-	public void addPerson(Person p) {
-		personInterface.addPerson(p);
+	PersonVerwaltung personVerwaltung;
+	
+	/**
+	 * @return
+	 */
+	public ArrayList<Person> getPersonsArrayList() {
+		return personVerwaltung.getPersons();
+	}
+	
+	/**
+	 * Adds Person to list
+	 * @param p Person to add
+	 */
+	public void execAddPerson(Person p) {
+		personVerwaltung.addPerson(p);
 	}
 
-	// remove person from shift
-	public void removePerson(Person p) {
-		if (personInterface.getPersons().contains(p)) {
-			personInterface.getPersons().remove(p);
+	/**
+	 * Remove Person from the list 
+	 * @param p
+	 */
+	public void execRemovePerson(Person p) {
+		if (getPersonsArrayList().contains(p)) {
+			getPersonsArrayList().remove(p);
+		} else {
+			System.out.println("Person not found !!!");
 		}
 	}
 	
-	public ArrayList<Person> getRawPersons() {
-		return personInterface.getPersons();
+	/**
+	 * Replace p1 with p2
+	 * @param p1 Person to replace to
+	 * @param p2 Person to replace with
+	 */
+	public void execReplacePerson(Person p1, Person p2) {
+		if (getPersonsArrayList().contains(p1)) {
+			getPersonsArrayList().remove(p1);
+			execAddPerson(p2);
+		} else {
+			System.out.println("Person not found !!!");
+		}
+	}
+	
+	/**
+	 * @return
+	 */
+	public boolean getIsShiftFull() {
+		return personVerwaltung.getIsShiftFull();
 	}
 	
 	/**
 	 * @return String
 	 */
-	public String getPersonsAsAList() {
+	public String getPersonsAsFormatedList() {
 		StringBuilder sb = new StringBuilder(10);
-		ArrayList<Person> persons = personInterface.getPersons();
 		
-		for (int i = 0; i < persons.size(); i++) {
-			if (!(i == persons.size() - 1)) {
-				sb.append(persons.get(i).getNachname() + " " + persons.get(i).getVorname() + ", ");
+		for (int i = 0; i < getPersonsArrayList().size(); i++) {
+			if (!(i == getPersonsArrayList().size() - 1)) {
+				sb.append(getPersonsArrayList().get(i).getNachname() + " " + getPersonsArrayList().get(i).getVorname() + ", ");
 			} else 
-				sb.append(persons.get(i).getNachname() + " " + persons.get(i).getVorname() + "\n");
-		}
-		
-		return sb.toString();
-		
+				sb.append(getPersonsArrayList().get(i).getNachname() + " " + getPersonsArrayList().get(i).getVorname() + "\n");
+		}		
+		return sb.toString();		
 	}
 	
+	/**
+	 * @return
+	 */
 	public abstract String getBeschreibung();
+	
+	/**
+	 * @return
+	 */
 	public abstract double getSchichtdauer();
 	
 }

@@ -1,29 +1,25 @@
 package schicht;
-/*dieses Schicht am Freitag von 11.30 - 16.00 Uhr Schicht
- * und arbeitet nur ein person*/
 
-import person.Person;
+import personInterface.PersonVerwaltung;
 
-public class FMittag extends Schicht{
+public class FMittag extends Schicht {
+	
 	private String beschreibung = "";
 	private double schichtdauer = 4.5;
-	
-	@Override
-	public void addPerson(Person p) {
-		// TODO Auto-generated method stub
-		
+	private int besatzung = 1;
+
+	public FMittag() {
+		personVerwaltung = new PersonVerwaltung(besatzung);
 	}
 
 	@Override
 	public String getBeschreibung() {
-		// TODO Auto-generated method stub
 		return beschreibung;
 	}
 
 	@Override
 	public double getSchichtdauer() {
-		// TODO Auto-generated method stub
-		return 0;
+		return schichtdauer;
 	}
 
 }

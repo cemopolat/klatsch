@@ -4,34 +4,27 @@ package schicht;
  * dieses schicht wird nur im sommer als unterst�tzungskraft eingesetzt
  */
 
-import personInterface.AddOnePerson;
-
-import person.Person;
-import personInterface.AddOnePerson;
+import personInterface.PersonVerwaltung;
 
 public class SommerAbend extends Schicht {
-	
-
-	@Override
-	public void addPerson(Person p) {
-		personInterface = new AddOnePerson();
-		
-	}
 	
 	private double schichtdauer = 4;
 	private double schichtpause = 0.5;
 	private int besatzung = 1;
 	private String beschreibung = "nur im Sommer von 18.00 Uhr bis 22.00 Uhr Schicht";
 
+
+	public SommerAbend() {
+		personVerwaltung = new PersonVerwaltung(besatzung);	
+	}
+
 	@Override
 	public String getBeschreibung() {
-		// TODO Auto-generated method stub
 		return beschreibung;
 	}
 
 	@Override
 	public double getSchichtdauer() {
-		// TODO Auto-generated method stub
 		return schichtdauer;
 	}
 

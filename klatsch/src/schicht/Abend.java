@@ -1,8 +1,6 @@
 package schicht;
-/*dieses Schicht i der Woche von 18.00 - 24.00 Uhr Schicht
- * und arbeitet nur ein person*/
 
-import personInterface.AddOnePerson;
+import personInterface.PersonVerwaltung;
 
 public class Abend extends Schicht {
 	
@@ -13,7 +11,7 @@ public class Abend extends Schicht {
 	private String beschreibung = "Abend Schicht unter der Woche von 18 Uhr bis 24 Uhr";
 
 	public Abend() {
-		personInterface = new AddOnePerson();
+		personVerwaltung = new PersonVerwaltung(besatzung);
 	}
 		
 	@Override

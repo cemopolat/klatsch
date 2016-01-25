@@ -2,27 +2,27 @@ package schicht;
 /*dieses Schicht von Dienstag bis Donnerstag von 15.00 - 20.00 Uhr Schicht
  * und arbeitet nur ein person*/
 
-import person.Person;
-import personInterface.AddOnePerson;
+import personInterface.PersonVerwaltung;
 
 public class NachMittag extends Schicht {
+
+	private double schichtdauer = -1;
+	private double schichtPause = -1;
+	private int besatzung = -1;
+	private String beschreibung = "!!! Beschreibung faehlt !!!";
 	
-	@Override
-	public void addPerson(Person p) {
-		personInterface = new AddOnePerson();
-		
+	public NachMittag() {
+		personVerwaltung = new PersonVerwaltung(besatzung);
 	}
 
 	@Override
 	public String getBeschreibung() {
-		// TODO Auto-generated method stub
-		return null;
+		return beschreibung;
 	}
 
 	@Override
 	public double getSchichtdauer() {
-		// TODO Auto-generated method stub
-		return 0;
+		return schichtdauer;
 	}
 
 }
