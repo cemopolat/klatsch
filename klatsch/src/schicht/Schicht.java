@@ -10,7 +10,7 @@ public abstract class Schicht {
 	PersonVerwaltung personVerwaltung;
 	
 	/**
-	 * @return
+	 * @return all persons in the shift as ArraList
 	 */
 	public ArrayList<Person> getPersonsArrayList() {
 		return personVerwaltung.getPersons();
@@ -37,7 +37,7 @@ public abstract class Schicht {
 	}
 	
 	/**
-	 * Replace p1 with p2
+	 * Replace perons1 with person2 in the shift
 	 * @param p1 Person to replace to
 	 * @param p2 Person to replace with
 	 */
@@ -51,14 +51,15 @@ public abstract class Schicht {
 	}
 	
 	/**
-	 * @return
+	 * @return true if shift is full
 	 */
 	public boolean getIsShiftFull() {
 		return personVerwaltung.getIsShiftFull();
 	}
 	
 	/**
-	 * @return String
+	 * @return formated string with all persons in the shift
+	 * "Nachname(a) Vorname(a), Nachname(b) Vorname(b), ... , Nachname(n) Vorname(n) \n"
 	 */
 	public String getPersonsAsFormatedList() {
 		StringBuilder sb = new StringBuilder(10);
@@ -73,12 +74,12 @@ public abstract class Schicht {
 	}
 	
 	/**
-	 * @return
+	 * @return description of the shift
 	 */
 	public abstract String getBeschreibung();
 	
 	/**
-	 * @return
+	 * @return duration of the shift in hours  
 	 */
 	public abstract double getSchichtdauer();
 	
