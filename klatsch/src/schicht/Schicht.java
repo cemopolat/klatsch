@@ -9,6 +9,8 @@ public abstract class Schicht {
 	
 	PersonVerwaltung personVerwaltung;
 	
+	static final short LOHN = -1; 
+	
 	/**
 	 * @return all persons in the shift as ArraList
 	 */

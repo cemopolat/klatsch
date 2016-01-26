@@ -2,7 +2,6 @@ package person;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 import schicht.Schicht;
 
@@ -14,7 +13,7 @@ public class Kollektivist extends Person {
 	private String steuernummer;
 	private double angemeledetestunden;
 	private double gearbeitetestunden;
-	private Date urlaubdatum;
+	private SimpleDateFormat urlaubdatum;
 
 	private ArrayList<Schicht> festeSchichten;
 
@@ -70,7 +69,7 @@ public class Kollektivist extends Person {
 		return gearbeitetestunden;
 	}
 
-	public Date getUrlaubdatum() {
+	public SimpleDateFormat getUrlaubdatum() {
 		return urlaubdatum;
 	}
 
@@ -104,7 +103,7 @@ public class Kollektivist extends Person {
 		this.gearbeitetestunden = gearbeitetestunden;
 	}
 
-	public void setUrlaubdatum(Date urlaubdatum) {
+	public void setUrlaubdatum(SimpleDateFormat urlaubdatum) {
 		this.urlaubdatum = urlaubdatum;
 	}
 }
