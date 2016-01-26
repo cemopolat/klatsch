@@ -4,14 +4,14 @@ package schicht;
 
 import personInterface.PersonVerwaltung;
 
-public class NachMittag extends Schicht {
+public class Nachmittag extends Schicht {
 
 	private double schichtdauer = -1;
 	private double schichtPause = -1;
 	private int besatzung = -1;
-	private String beschreibung = "!!! Beschreibung faehlt !!!";
+	private String beschreibung = null;
 	
-	public NachMittag() {
+	public Nachmittag() {
 		personVerwaltung = new PersonVerwaltung(besatzung);
 	}
 
