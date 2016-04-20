@@ -14,6 +14,9 @@ public class PersonVerwaltung {
 		this.besatzung = besatzung;
 	}
 	
+	/**
+	 * @param person
+	 */
 	public void addPerson(Person person) {
 		if (!persons.contains(person) && besatzung <= persons.size()) {
 			System.out.println("Schicht ist voll!");

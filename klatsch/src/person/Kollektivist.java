@@ -72,7 +72,7 @@ public class Kollektivist extends Person {
 	public SimpleDateFormat getUrlaubdatum() {
 		return urlaubdatum;
 	}
-
+	
 	public void setFesteSchichten(Schicht schicht) {
 		if (!festeSchichten.contains(schicht)) {
 			// TODO implement method body !!!!

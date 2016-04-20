@@ -16,4 +16,12 @@ public class Person {
 	public String getNachname() {
 		return nachname;
 	}	
+	
+	public void setVoname(String vorname) {
+		this.vorname = vorname;
+	}
+	
+	public void setNachname(String nachname) {
+		this.nachname = nachname;
+	}
 }
